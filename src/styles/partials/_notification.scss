@@ -1,65 +1,67 @@
 @use './variables';
 .notification-wrapper {
-        text-align: center;
-        width: fit-content;
+          text-align: center;
+          width: fit-content;
 
     &:hover {
         .notification {
-                opacity: 1;
+                  opacity: 1;
+                  transform: scale(1);
           }
-        .thumbs-up {
+        .thumbs-up-icon {
             &::after {
-                    opacity: 1;
+                      opacity: 1;
+                      transform: scale(1);
               }
-        }
-    }
+      }
+  }
   }
 .thumbs-up-icon {
-        font-size: 26px;
-        position: relative;
+          font-size: 26px;
+          position: relative;
 
       &::after {
-            background-color: variables.$bg-color;
-            border-radius: 50%;
-            border: solid 2px variables.$border-color;
-            content: '';
-            height: 5px;
-            inset: 0 0 auto auto;
-            opacity: 0;
-            position: absolute;
-            transform: scale(0);
-            transition: transform .5s linear, opacity .5s;
-            width: 5px;
+              background-color: variables.$bg-color;
+              border-radius: 50%;
+              border: solid 2px variables.$border-color;
+              content: '';
+              height: 5px;
+              inset: 0 0 auto auto;
+              opacity: 0;
+              position: absolute;
+              transform: scale(0);
+              transition: transform .5s linear, opacity .5s;
+              width: 5px;
       }
   }
 .notification {
-      background-color: variables.$bg-color;
-      border-radius: 5px;
-      display: flex;
-      gap: 10px;
-      margin-top: 5px;
-      opacity: 0;
-      padding: 5px;
-      position: relative;
-      transform-origin: top;
-      transform: scale(0);
-      transition: transform .5s linear, opacity 5s;
+        background-color: variables.$bg-color;
+        border-radius: 5px;
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+        opacity: 0;
+        padding: 5px;
+        position: relative;
+        transform-origin: top;
+        transform: scale(0);
+        transition: transform .5s linear, opacity 5s;
 
       &::before {
-        content: '';
-        position: absolute;
-        inset: -3px auto auto 50%;
-        transform: translateX(-50%) rotate(45deg);
-        width: 10px;
-        height: 10px;
-        background-color: inherit;
-        border-radius: 2px;
-        z-index: -1;
-      }
+          background-color: inherit;
+          border-radius: 2px;
+          content: '';
+          height: 10px;
+          inset: -3px auto auto 50%;
+          position: absolute;
+          transform: translateX(-50%) rotate(45deg);
+          width: 10px;
+          z-index: -1;
+  }
 }
-
 .notification__item {
-    display: flex;
-    align-items: center;
-    column-gap: 2px;
+      align-items: center;
+      color: white;
+      column-gap: 2px;
+      display: flex;
 }
