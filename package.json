@@ -1,0 +1,24 @@
+{
+  "name": "notification-animation",
+  "version": "1.0.0",
+  "description": "A small animation implementation using HTML/CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "node-sass -w styles/styles.scss -o styles/",
+    "prepare": "node-sass -r --output-style compress styles/styles.scss -o styles/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JadedEric/notification-animation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JadedEric/notification-animation/issues"
+  },
+  "homepage": "https://github.com/JadedEric/notification-animation#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
