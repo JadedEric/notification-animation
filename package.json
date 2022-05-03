@@ -4,8 +4,8 @@
   "description": "A small animation implementation using HTML/CSS",
   "main": "index.js",
   "scripts": {
-    "sass-watch": "node-sass -w styles/styles.scss -o styles/",
-    "prepare": "node-sass -r --output-style compress styles/styles.scss -o styles/"
+    "dev": "parcel src/index.html",
+    "build": "parcel build --no-minify --no-content-hash --no-cache src/index.html"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,10 @@
     "url": "https://github.com/JadedEric/notification-animation/issues"
   },
   "homepage": "https://github.com/JadedEric/notification-animation#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.3.1"
+  },
   "dependencies": {
-    "node-sass": "^7.0.1"
+    "sass": "^1.51.0"
   }
 }
